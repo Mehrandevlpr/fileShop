@@ -10,8 +10,8 @@
           <div class="col-12">
             <h1 class="m-0 text-dark">
                 <a class="nav-link drawer" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
-                محصولات
-                <a class="btn btn-primary float-left text-white py-2 px-4" href="products-add.php">افزودن محصول جدید</a>
+                دسته بندی ها
+                <a class="btn btn-primary float-left text-white py-2 px-4" href="category-add.php">افزودن دسته بندی جدید</a>
             </h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -22,11 +22,12 @@
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
+      @include('errors.message')
           <div class="row">
               <div class="col-12">
                   <div class="card">
                       <div class="card-header">
-                          <h3 class="card-title">لیست محصولات</h3>
+                          <h3 class="card-title">لیست دسته بندی ها</h3>
 
                           <div class="card-tools">
                               <div class="input-group input-group-sm" style="width: 150px;">
@@ -41,35 +42,17 @@
                       <!-- /.card-header -->
                       <div class="table table-striped table-valign-middle mb-0">
                           <table class="table table-hover mb-0">
-                              <tbody>
-                              <tr>
+                              <tbody><tr>
                                   <th>آیدی</th>
+                                  <th>نامک</th>
                                   <th>عنوان</th>
-                                  <th>دسته بندی</th>
-                                  <th>مالک طرح</th>
-                                  <th>توضیحات</th>
-                                  <th>لینک دمو</th>
-                                  <th>لینک دانلود</th>
-                                  <th>قیمت</th>
                                   <th>تاریخ ایجاد</th>
                                   <th>عملیات</th>
                               </tr>
                               <tr>
-                                  <td>۱۲۲</td>
-                                  <td>
-                                      <i class="bi bi-clipboard-pulse"></i>
-                                       کارت ویزیت مشاور املاک
-                                  </td>
-                                  <td>کارت ویزیت</td>
-                                  <td>میلاد بسحاق</td>
-                                  <td>توضیحات</td>
-                                  <td>
-                                      <a href="#" class="btn btn-default btn-icons" title="لینک دمو"><i class="fa fa-link"></i></a>
-                                  </td>
-                                  <td>
-                                      <a href="#" class="btn btn-default btn-icons" title="لینک دانلود"><i class="fa fa-link"></i></a>
-                                  </td>
-                                  <td>۳۹۰۰۰ تومان</td>
+                                  <td>۱۸۳</td>
+                                  <td>php</td>
+                                  <td>پی اچ پی</td>
                                   <td>۲۵ مرداد ۱۴۰۰</td>
                                   <td>
                                       <a href="#" class="btn btn-default btn-icons"><i class="fa fa-edit"></i></a>
@@ -77,21 +60,9 @@
                                   </td>
                               </tr>
                               <tr>
-                                  <td>۱۲۲</td>
-                                  <td>
-                                     <i class="bi bi-clipboard-pulse"></i>
-                                      کارت ویزیت مشاور املاک
-                                 </td>
-                                  <td>کارت ویزیت</td>
-                                  <td>میلاد بسحاق</td>
-                                  <td>توضیحات</td>
-                                  <td>
-                                      <a href="#" class="btn btn-default btn-icons" title="لینک دمو"><i class="fa fa-link"></i></a>
-                                  </td>
-                                  <td>
-                                      <a href="#" class="btn btn-default btn-icons" title="لینک دانلود"><i class="fa fa-link"></i></a>
-                                  </td>
-                                  <td>۳۹۰۰۰ تومان</td>
+                                  <td>۱۸۳</td>
+                                  <td>php</td>
+                                  <td>پی اچ پی</td>
                                   <td>۲۵ مرداد ۱۴۰۰</td>
                                   <td>
                                       <a href="#" class="btn btn-default btn-icons"><i class="fa fa-edit"></i></a>
@@ -99,21 +70,9 @@
                                   </td>
                               </tr>
                               <tr>
-                                  <td>۱۲۲</td>
-                                  <td>
-                                     <i class="bi bi-clipboard-pulse"></i>
-                                      کارت ویزیت مشاور املاک
-                                 </td>
-                                  <td>کارت ویزیت</td>
-                                  <td>میلاد بسحاق</td>
-                                  <td>توضیحات</td>
-                                  <td>
-                                      <a href="#" class="btn btn-default btn-icons" title="لینک دمو"><i class="fa fa-link"></i></a>
-                                  </td>
-                                  <td>
-                                      <a href="#" class="btn btn-default btn-icons" title="لینک دانلود"><i class="fa fa-link"></i></a>
-                                  </td>
-                                  <td>۳۹۰۰۰ تومان</td>
+                                  <td>۱۸۳</td>
+                                  <td>php</td>
+                                  <td>پی اچ پی</td>
                                   <td>۲۵ مرداد ۱۴۰۰</td>
                                   <td>
                                       <a href="#" class="btn btn-default btn-icons"><i class="fa fa-edit"></i></a>
@@ -121,21 +80,9 @@
                                   </td>
                               </tr>
                               <tr>
-                                  <td>۱۲۲</td>
-                                  <td>
-                                     <i class="bi bi-clipboard-pulse"></i>
-                                      کارت ویزیت مشاور املاک
-                                 </td>
-                                  <td>کارت ویزیت</td>
-                                  <td>میلاد بسحاق</td>
-                                  <td>توضیحات</td>
-                                  <td>
-                                      <a href="#" class="btn btn-default btn-icons" title="لینک دمو"><i class="fa fa-link"></i></a>
-                                  </td>
-                                  <td>
-                                      <a href="#" class="btn btn-default btn-icons" title="لینک دانلود"><i class="fa fa-link"></i></a>
-                                  </td>
-                                  <td>۳۹۰۰۰ تومان</td>
+                                  <td>۱۸۳</td>
+                                  <td>php</td>
+                                  <td>پی اچ پی</td>
                                   <td>۲۵ مرداد ۱۴۰۰</td>
                                   <td>
                                       <a href="#" class="btn btn-default btn-icons"><i class="fa fa-edit"></i></a>
@@ -143,21 +90,19 @@
                                   </td>
                               </tr>
                               <tr>
-                                  <td>۱۲۲</td>
+                                  <td>۱۸۳</td>
+                                  <td>php</td>
+                                  <td>پی اچ پی</td>
+                                  <td>۲۵ مرداد ۱۴۰۰</td>
                                   <td>
-                                     <i class="bi bi-clipboard-pulse"></i>
-                                      کارت ویزیت مشاور املاک
+                                      <a href="#" class="btn btn-default btn-icons"><i class="fa fa-edit"></i></a>
+                                      <a href="#" class="btn btn-default btn-icons"><i class="fa fa-trash"></i></a>
                                   </td>
-                                  <td>کارت ویزیت</td>
-                                  <td>میلاد بسحاق</td>
-                                  <td>توضیحات</td>
-                                  <td>
-                                      <a href="#" class="btn btn-default btn-icons" title="لینک دمو"><i class="fa fa-link"></i></a>
-                                  </td>
-                                  <td>
-                                      <a href="#" class="btn btn-default btn-icons" title="لینک دانلود"><i class="fa fa-link"></i></a>
-                                  </td>
-                                  <td>۳۹۰۰۰ تومان</td>
+                              </tr>
+                              <tr>
+                                  <td>۱۸۳</td>
+                                  <td>php</td>
+                                  <td>پی اچ پی</td>
                                   <td>۲۵ مرداد ۱۴۰۰</td>
                                   <td>
                                       <a href="#" class="btn btn-default btn-icons"><i class="fa fa-edit"></i></a>
@@ -187,5 +132,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
+
   @endsection('content')
 

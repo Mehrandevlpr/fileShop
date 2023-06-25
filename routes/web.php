@@ -17,7 +17,7 @@ use App\Http\Controllers\admin\ProductsController;
 */
 
 Route::get('/', function () {
-    return dd('welcome');
+    return dd(bcrypt('pass11word'));
 });
 
 
@@ -36,7 +36,9 @@ Route::get('/', function () {
 
 
 Route::prefix('admin')->group(function () {
+
         Route::prefix('categories')->group(function () {
+            
             Route::get('create',[CategoriesController::class ,'create'])->name('admin.categories.create');
             Route::post('create',[CategoriesController::class ,'store'])->name('admin.categories.store');
             Route::get('',[CategoriesController::class ,'all'])->name('admin.categories.all');
@@ -48,14 +50,16 @@ Route::prefix('admin')->group(function () {
         });
 
         Route::prefix('products')->group(function () {
+
             Route::get('create',[ProductsController::class ,'create'])->name('admin.products.create');
             Route::post('store',[ProductsController::class ,'store'])->name('admin.products.store');
-            // Route::get('',[ProductsController::class ,'all'])->name('admin.categories.all');
-            // Route::get('products',[ProductsController::class ,'product'])->name('admin.categories.products');
-            // Route::delete('{category_id}/delete',[ProductsController::class ,'delete'])->name('admin.categories.delete');
-            // Route::get('{category_id}/edit',[ProductsController::class ,'edit'])->name('admin.categories.edit');
-            // Route::put('{category_id}/update',[ProductsController::class ,'update'])->name('admin.categories.update');
-            
+            Route::get('',[ProductsController::class ,'all'])->name('admin.products.all');
+            Route::delete('{product_id}/delete',[ProductsController::class ,'delete'])->name('admin.products.delete');
+            Route::get('{product_id}/download/demo_url',[ProductsController::class ,'download_demo'])->name('admin.products.download.demo');
+            Route::get('{product_id}/download/source_url',[ProductsController::class ,'download_source'])->name('admin.products.download.source');
+            Route::get('{product_id}/edit',[ProductsController::class ,'edit'])->name('admin.products.edit');
+            Route::put('{product_id}/update',[ProductsController::class ,'update'])->name('admin.products.update');
+
         });
 });
     
