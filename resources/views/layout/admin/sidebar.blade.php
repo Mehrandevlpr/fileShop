@@ -68,7 +68,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/admin/users-add.php" class="nav-link">
+                                <a href="{{ route('admin.users.create') }}" class="nav-link">
                                     <i class="fa fa-plus nav-icon"></i>
                                     <p>افزودن</p>
                                 </a>
@@ -76,7 +76,7 @@
                         </ul>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/admin/users.php" class="nav-link">
+                                <a href="{{ route('admin.users.all') }}" class="nav-link">
                                     <i class="fa fa-list nav-icon"></i>
                                     <p>لیست</p>
                                 </a>
@@ -84,15 +84,15 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="/admin/orders.php" class="nav-link">
-                            <i class="nav-icon fa fa-shopping-cart"></i>
-                            <p class="text">سفارشات</p>
+                        <a href="{{ route('admin.payments.all') }}" class="nav-link">
+                            <i class="nav-icon fa fa-dollar"></i>
+                            <p class="text">پرداخت ها</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/admin/payments.php" class="nav-link">
+                        <a href="{{ route('admin.orders.all') }}" class="nav-link">
                             <i class="nav-icon fa fa-dollar"></i>
-                            <p class="text">پرداخت ها</p>
+                            <p class="text">سفارشات</p>
                         </a>
                     </li>
                 </ul>

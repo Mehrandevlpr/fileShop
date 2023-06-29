@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Product\UpdateRequest;
@@ -27,7 +27,8 @@ class ProductsController extends Controller
     public function store(StoreRequest $request){
 
         $validatedData = $request->validated();
-        $admin = User::where('email','admin@gmail.com')->first();
+        //TODO: update serach by loggin user_id
+        $admin = User::where('email','garet@gmail.com')->first();
 
         $createdProduct = Product::create([
             'title'        =>$validatedData['title'],
@@ -37,9 +38,6 @@ class ProductsController extends Controller
             'description'  =>$validatedData['description'],
         ]);
 
-        // dd($createdProduct);
-        //.$validatedData['thumbnail_url']->getClientOriginalName()
-        
         if(!$this->uploadImages($createdProduct,$validatedData)){
 
           return back()->with('failed' , 'تصاویر اپلود نشد');

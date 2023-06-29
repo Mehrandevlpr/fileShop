@@ -10,40 +10,53 @@
           <div class="col-12">
             <h1 class="m-0 text-dark">
                 <a class="nav-link drawer" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
-                دسته بندی ها / بروز رسانی {{ $category->title }}
-                <a class="btn btn-primary float-left text-white py-2 px-4" href="category.php">بازگشت به صفحه دسته بندی ها</a>
+                کاربران / افزودن
+                <a class="btn btn-primary float-left text-white py-2 px-4" href="{{ route('admin.users.all') }}">بازگشت به صفحه کاربران</a>
             </h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    @include('errors.message')
     <!-- /.content-header -->
 
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
+        @include('errors.message')
           <div class="row mt-5">
               <div class="col-md-12">
                   <div class="card card-defualt">
-                     
                       <!-- form start -->
-                      <form action="{{ route('admin.categories.update', $category->id ) }}" method="post">
+                      <form action="{{ route('admin.users.store') }}" method="post">
                         @csrf
-                        @method('put')
-                          <input type="hidden" name="category_id" value="{{ $category->id }}">
                           <div class="card-body">
                               <div class="row">
                                   <div class="col-md-6">
                                       <div class="form-group">
-                                          <label>نامک</label>
-                                          <input type="text" class="form-control" name="slug" placeholder="نامک را وارد کنید" value="{{ $category->slug }}">
+                                          <label>نام و نام خانوادگی</label>
+                                          <input type="text" class="form-control" name="name" placeholder="نام و نام خانوادگی را وارد کنید">
                                       </div>
                                   </div>
                                   <div class="col-md-6">
                                       <div class="form-group">
-                                          <label>عنوان</label>
-                                          <input type="text" class="form-control" name="title" placeholder="عنوان را وارد کنید" value="{{ $category->title }}">
+                                          <label>ایمیل</label>
+                                          <input type="email" class="form-control" name="email" placeholder="ایمیل را وارد کنید">
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label>موبایل</label>
+                                          <input type="text" class="form-control" name="mobile" placeholder="موبایل را وارد کنید">
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label>نقش کاربری</label>
+                                          <select class="form-control" name="role">
+                                              <option value="user">کاربر عادی</option>
+                                              <option value="seller">طراح و فروشنده</option>
+                                              <option value="admin">مدیر</option>
+                                          </select>
                                       </div>
                                   </div>
                               </div>
@@ -65,4 +78,5 @@
   </div>
   <!-- /.content-wrapper -->
 
+ 
   @endsection

@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Order extends Model
 {
     use HasFactory;
+    
     public $guarded =[];
 
-    public function category() {
-        return $this->belongsTo(Category::class);
-    }
-    public function owner() {
+    public function user() {
         return $this->belongsTo(User::class);
     }
     public function payment() {
-        return $this->hasMany(Payment::class);
+        return $this->hasOne(Payment::class);
     }
+
 }

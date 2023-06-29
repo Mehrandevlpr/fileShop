@@ -2,8 +2,13 @@
 
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\CategoriesController;
-use App\Http\Controllers\admin\ProductsController;
+use App\Http\Controllers\Admin\CategoriesController;
+use App\Http\Controllers\Admin\OrdersController;
+use App\Http\Controllers\Admin\PaymentsController;
+use App\Http\Controllers\Admin\ProductsController;
+use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\Home\ProductsController as HomeProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,22 +21,13 @@ use App\Http\Controllers\admin\ProductsController;
 |
 */
 
-Route::get('/', function () {
-    return dd(bcrypt('pass11word'));
+
+
+Route::prefix('')->group(function () {
+    Route::get('',[HomeController::class ,'index'])->name('frontend.products.all');
+    Route::get('{product_id}/single',[HomeProductsController::class ,'singlePage'])->name('frontend.products.single');
+
 });
-
-
-
-// Route::get('products/all', function () {
-  
-//     //$could be a variable ==> Category::create( [
-//     //     'title'=> 'hello',
-//     //     'slug' => 'world'
-//     // ]);
-//     // dd($var);
-//     // dd(Category::where('slug', 'war'));//->update(array('slug' =>'war')));
-//     dd(Category::all());
-// });
 
 
 
@@ -60,6 +56,23 @@ Route::prefix('admin')->group(function () {
             Route::get('{product_id}/edit',[ProductsController::class ,'edit'])->name('admin.products.edit');
             Route::put('{product_id}/update',[ProductsController::class ,'update'])->name('admin.products.update');
 
+        });
+        Route::prefix('users')->group(function () {
+
+            Route::get('create',[UsersController::class ,'create'])->name('admin.users.create');
+            Route::post('store',[UsersController::class ,'store'])->name('admin.users.store');
+            Route::get('',[UsersController::class ,'all'])->name('admin.users.all');
+            Route::delete('{user_id}/delete',[UsersController::class ,'delete'])->name('admin.users.delete');
+            Route::get('{user_id}/edit',[UsersController::class ,'edit'])->name('admin.users.edit');
+            Route::put('{user_id}/update',[UsersController::class ,'update'])->name('admin.users.update');
+
+        });
+
+        Route::prefix('orders')->group(function(){
+            Route::get('',[OrdersController::class , 'all'])->name('admin.orders.all');
+        });
+        Route::prefix('payments')->group(function(){
+            Route::get('',[PaymentsController::class ,'all'])->name('admin.payments.all');
         });
 });
     
