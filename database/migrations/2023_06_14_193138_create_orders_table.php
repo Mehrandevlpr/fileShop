@@ -16,7 +16,7 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('amount');
-            $table->char('ref_count',128)->nullable();
+            $table->char('ref_code',128)->nullable();
             $table->enum('status',['unpaid','paid']);
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

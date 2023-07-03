@@ -13,3 +13,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+README.md
+webpack.mix.js
+artisan
+.styleci.yaml

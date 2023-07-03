@@ -28,7 +28,7 @@ class ProductsController extends Controller
 
         $validatedData = $request->validated();
         //TODO: update serach by loggin user_id
-        $admin = User::where('email','garet@gmail.com')->first();
+        $admin = User::where('email','admin@gmail.com')->first();
 
         $createdProduct = Product::create([
             'title'        =>$validatedData['title'],

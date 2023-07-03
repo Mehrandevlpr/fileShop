@@ -1,13 +1,15 @@
 <?php
 
-use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\OrdersController;
 use App\Http\Controllers\Admin\PaymentsController;
 use App\Http\Controllers\Admin\ProductsController;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Home\BasketsController;
+use App\Http\Controllers\Home\CheckoutController;
 use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\Home\PaymentsController as HomePaymentsController;
 use App\Http\Controllers\Home\ProductsController as HomeProductsController;
 
 /*
@@ -22,10 +24,17 @@ use App\Http\Controllers\Home\ProductsController as HomeProductsController;
 */
 
 
+Route::prefix('payment')->group(function () {
+    Route::post('pay',[HomePaymentsController::class ,'pay'])->name('payment.pay');
+    Route::post('callback',[HomePaymentsController::class ,'callback'])->name('payment.callback');
 
+});
 Route::prefix('')->group(function () {
     Route::get('',[HomeController::class ,'index'])->name('frontend.products.all');
     Route::get('{product_id}/single',[HomeProductsController::class ,'singlePage'])->name('frontend.products.single');
+    Route::get('{product_id}/addTobasket',[BasketsController::class ,'addToBasket'])->name('frontend.baskets.add');
+    Route::get('{product_id}/removeFromBasket',[BasketsController::class ,'removeFromBasket'])->name('frontend.baskets.remove');
+    Route::get('checkout',[CheckoutController::class ,'checkout'])->name('frontend.baskets.checkout');
 
 });
 
