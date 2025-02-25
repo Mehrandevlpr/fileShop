@@ -10,3 +10,7 @@
 
 
 # fileShop
+
+<p align="center">
+  features : MVC, switch, payment, ...
+</p>
