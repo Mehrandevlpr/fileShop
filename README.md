@@ -7,10 +7,37 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# 🚀 Project File Shop
+
+A brief description of your project and its purpose.
+
+## 📌 Features
+
+- ✅ Feature 1: shopping card
+- ✅ Feature 2: Login/Register
+- ✅ Feature 3: payment
+
+## 🛠 UnitTest
+
+The flow of the product is tested
 
 
-# fileShop
+## 📚 Libraries Used
 
-<p align="center">
-  features : MVC, switch, payment, ...
-</p>
+- [Library 1](https://link-to-library) - Purpose
+- [Library 2](https://link-to-library) - Purpose
+
+## ⚙️ Configuration
+
+Set up your environment variables:
+
+```sh
+API_KEY=your_api_key_here
+DB_CONNECTION_STRING=mongodb://localhost:27017
+```
+
+
+- GitHub: [@Mehrandevlpr](https://github.com/Mehrandevlpr/fileShop)
+- Email: [mehranhamzeh74@gmail.com](mehranhamzeh74@gmail.com)
+
+
