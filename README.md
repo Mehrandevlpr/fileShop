@@ -29,14 +29,6 @@ The flow of the product is tested
 
 ## ⚙️ Configuration
 
-Set up your environment variables:
-
-```sh
-API_KEY=your_api_key_here
-DB_CONNECTION_STRING=mongodb://localhost:27017
-```
-
-
 - GitHub: [@Mehrandevlpr](https://github.com/Mehrandevlpr/fileShop)
 - Email: [mehranhamzeh74@gmail.com](mehranhamzeh74@gmail.com)
 
