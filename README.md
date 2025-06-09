@@ -12,10 +12,18 @@
 A brief description of your project and its purpose.
 
 ## 📌 Features
+## chat enjoy 🛬
 
-- ✅ Feature 1: shopping card
-- ✅ Feature 2: Login/Register
-- ✅ Feature 3: payment
+
+
+| Inline formatting | Shortcut |
+| ---                         | ---   |
+| - ✅ Configs                | Done  |
+| - ✅ Filter/Sort/Paginate   | Done  |
+| - ✅ Authentication         | Done  |
+| - ✅ Admin Panel            | Done  |
+| - ✅ payment                | Done  |
+
 
 ## 🛠 UnitTest
 
@@ -24,12 +32,10 @@ The flow of the product is tested
 
 ## 📚 Libraries Used
 
-- [Library 1](https://link-to-library) - Purpose
-- [Library 2](https://link-to-library) - Purpose
+- [Library 1](https://link-to-library) - Ratchet
+- [Library 2](https://link-to-library) - Database
 
 ## ⚙️ Configuration
 
-- GitHub: [@Mehrandevlpr](https://github.com/Mehrandevlpr/fileShop)
-- Email: [mehranhamzeh74@gmail.com](mehranhamzeh74@gmail.com)
-
+Set up your environment variables:
 
