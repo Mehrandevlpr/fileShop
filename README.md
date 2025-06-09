@@ -25,17 +25,3 @@ A brief description of your project and its purpose.
 | - ✅ payment                | Done  |
 
 
-## 🛠 UnitTest
-
-The flow of the product is tested
-
-
-## 📚 Libraries Used
-
-- [Library 1](https://link-to-library) - Ratchet
-- [Library 2](https://link-to-library) - Database
-
-## ⚙️ Configuration
-
-Set up your environment variables:
-
