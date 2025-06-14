@@ -14,12 +14,13 @@ A brief description of your project and its purpose.
 ## 📌 Features
 
 
-| Inline formatting | Shortcut |
+| Features | Status |
 | ---                         | ---   |
 | - ✅ Configs                | Done  |
 | - ✅ Filter/Sort/Paginate   | Done  |
 | - ✅ Authentication         | Done  |
 | - ✅ Admin Panel            | Done  |
-| - ✅ payment                | Done  |
+| - ✅ Email Verification     | Done  |
+| - ✅ Payment                | Done  |
 
 
